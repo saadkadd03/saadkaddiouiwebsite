@@ -14,6 +14,7 @@ import Mongo from "../../Assets/TechIcons/Mongo.svg";
 import SQL from "../../Assets/TechIcons/SQL.svg";
 import Kubernates from "../../Assets/TechIcons/Kubernates.svg";
 import Redux from "../../Assets/TechIcons/Redux.svg";
+import { SiSolidity } from 'react-icons/si';
 
 function Techstack() {
   return (
