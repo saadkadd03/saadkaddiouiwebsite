@@ -40,8 +40,8 @@ function Home2() {
               and exploring new ways to  make life easier.
               <br />
               <br />
-              Whenever possible, I love building projects with
-              <b className="purple"> Node.js </b> and modern frameworks like{" "}
+              Whenever possible, I love building 
+              <b className="purple"> Digital </b> Project{" "}
               <i>
                 <b className="purple"></b> {" "}
                 <b className="purple"></b>.
