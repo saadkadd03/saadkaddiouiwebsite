@@ -21,14 +21,14 @@ function App() {
   const [load, upadateLoad] = useState(true);
 
   useEffect(() => {
-    // --- Adsterra Script Injection Start ---
+    // 1. Create the script element
     const script = document.createElement("script");
     script.src = "https://yawncollaremotion.com/21/ad/e8/21ade8aee2d885a52e7c4e5308f47df7.js";
     script.async = true;
-    
-    // Appending the script to the body
+    script.type = "text/javascript";
+
+    // 2. Append it to the document body
     document.body.appendChild(script);
-    // --- Adsterra Script Injection End ---
 
     const timer = setTimeout(() => {
       upadateLoad(false);
@@ -36,7 +36,7 @@ function App() {
 
     return () => {
       clearTimeout(timer);
-      // Cleanup: removes the script if the component unmounts
+      // Cleanup to prevent multiple scripts loading on refresh
       if (document.body.contains(script)) {
         document.body.removeChild(script);
       }
@@ -48,6 +48,9 @@ function App() {
       <Preloader load={load} />
       <div className="App" id={load ? "no-scroll" : "scroll"}>
         <Navbar />
+        {/* AD PLACEMENT: If this is a banner ad, it needs a place to live */}
+        <div id="adsterra-container" style={{ textAlign: 'center', margin: '20px 0' }}></div>
+        
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
