@@ -14,18 +14,6 @@ import {
 import { FaLinkedinIn } from "react-icons/fa";
 
 function Home() {
-
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://pl28617432.effectivegatecpm.com/95/a0/20/95a020556c8a57edf0eb09a502aae886.js";
-    script.async = true;
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
-
   return (
     <section>
 
