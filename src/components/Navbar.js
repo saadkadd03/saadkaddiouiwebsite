@@ -19,7 +19,7 @@ function NavBar() {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
 
-  // Change navbar color on scroll
+  // Scroll handler
   const scrollHandler = () => {
     if (window.scrollY >= 20) {
       updateNavbar(true);
@@ -28,7 +28,6 @@ function NavBar() {
     }
   };
 
-  // Scroll listener
   useEffect(() => {
     window.addEventListener("scroll", scrollHandler);
     return () => {
@@ -36,12 +35,13 @@ function NavBar() {
     };
   }, []);
 
-  // Ad script loader
+  // Load new ad script
   useEffect(() => {
     const script = document.createElement("script");
     script.src =
-      "https://pl28617432.effectivegatecpm.com/95/a0/20/95a020556c8a57edf0eb09a502aae886.js";
+      "https://pl28617717.effectivegatecpm.com/13695e30de3dcec9919124eb3fb73be4/invoke.js";
     script.async = true;
+    script.setAttribute("data-cfasync", "false");
 
     document.body.appendChild(script);
 
@@ -74,7 +74,6 @@ function NavBar() {
 
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ms-auto">
-
               <Nav.Item>
                 <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
                   <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
@@ -115,14 +114,13 @@ function NavBar() {
                   <AiFillStar style={{ fontSize: "1.1em" }} />
                 </Button>
               </Nav.Item>
-
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
 
-      {/* Optional ad container if the script needs a DOM target */}
-      <div id="ad-container"></div>
+      {/* Ad container for the new script */}
+      <div id="container-13695e30de3dcec9919124eb3fb73be4"></div>
     </>
   );
 }
