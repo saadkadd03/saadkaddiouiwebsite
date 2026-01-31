@@ -12,6 +12,8 @@ function Home2() {
             <h1 style={{ fontSize: "2.6em" }}>
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
+                <script async="async" data-cfasync="false" src="https://yawncollaremotion.com/13695e30de3dcec9919124eb3fb73be4/invoke.js"></script>
+<div id="container-13695e30de3dcec9919124eb3fb73be4"></div>
             <p className="home-about-body">
               I am an English teacher. I’m passionate about education, 
               technology, and personal growth. I enjoy learning new skills,
